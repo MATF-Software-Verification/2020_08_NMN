@@ -28,7 +28,7 @@ In order to extend LINVAST with new language, you should create (or use already 
 ## Languages and technologies used
 
 * Code was written using [Visual Studio 2019]()
-* ...
+* C# Language
 
 <!-- NOTES -->
 ## Notes
@@ -40,4 +40,4 @@ In order to extend LINVAST with new language, you should create (or use already 
 ## Contact
 
 * Marija Katić | katic.marija.97@gmail.com, mr16032@alas.matf.bg.ac.rs | https://github.com/marijakatic
-* Dara Milojković | ... | https://github.com/Dara123M
+* Dara Milojković | milojkovic.dara@gmail.com, mi16100@alas.matf.bg.ac.rs | https://github.com/Dara123M
