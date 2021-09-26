@@ -27,8 +27,10 @@
 \definecolor{lightgrey}{rgb}{0.90, 0.90, 0.90}
 \definecolor{yelloworange}{rgb}{1, 0.86, 0.25}
 \definecolor{lightred}{rgb}{1, 0.5, 0.5}
+\usepackage{subcaption} 
 
 \lstset{ 
+  language=Java,
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
   basicstyle=\scriptsize\ttfamily,        % the size of the fonts that are used for the code
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
@@ -44,7 +46,7 @@
   keywordstyle=\color{blue},       % keyword style
   %language=text,                  % the language of the code
   morekeywords={*,...},            % if you want to add more keywords to the set
-  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=5pt,                   % how far the line-numbers are from the code
   numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
   rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
@@ -64,7 +66,7 @@
 \large *LINVAST - Language-INVariant AST library}
 
 
-\author{Dara Milojković, ... \and Marija Katić, katic.marija.97@gmail.com}
+\author{Dara Milojković, milojkovic.dara@gmail.com \and Marija Katić, katic.marija.97@gmail.com}
 
 \date{Software Verification course \\ University of Belgrade \\Faculty of Mathematics\\[\baselineskip] \today}
 
@@ -146,23 +148,83 @@ variableDeclarators
 Since not all visitor methods have been implemented yet, the examples are small, e.g. for now we can only show examples with empty block statements.
 
 \begin{figure}[h!]
+\begin{center}
 \begin{lstlisting}
-// Java code will be added here
+public class HelloWorld{
+
+}
 \end{lstlisting}
-Image of AST will be added here.
-%\includegraphics[width=\textwidth]{}
-\caption{Example 1}
+
+\includegraphics[width=\textwidth]{ast}
+\caption{Empty class \textbf{HelloWorld}}
 \label{fig:ast1}
+\end{center}
 \end{figure}
 
 \begin{figure}[h!]
+\begin{center}
 \begin{lstlisting}
-// Java code will be added here
+public class Animal {
+
+	public String name;
+	
+	public void eats();
+}
 \end{lstlisting}
-Image of AST will be added here.
+Image of AST will be added here.\\
+     \centering
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{animal_ast1}
+         \caption{First part of the tree}
+     \end{subfigure}
+     \quad
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{animal_ast2}
+         \caption{Second part of the tree}
+     \end{subfigure}
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{animal_ast3}
+         \caption{Third part of the tree}
+     \end{subfigure}
+
 %\includegraphics[width=\textwidth]{}
-\caption{Example 2}
-\label{fig:ast2}
+\caption{\textbf{Animal} class example}
+\label{fig:ast3}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{center}
+\begin{lstlisting}
+public class Rabbit extends Animal {
+
+	public void eats(){
+		System.out.println("Rabbits eat carrots.");	
+	}
+}
+\end{lstlisting}
+Image of AST will be added here.\\
+     \centering
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{rabbit_ast1}
+         \caption{First half of the tree}
+     \end{subfigure}
+     \quad
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{rabbit_ast2}
+         \caption{Second half of the tree}
+     \end{subfigure}
+
+%\includegraphics[width=\textwidth]{}
+\caption{Example with parent class}
+\label{fig:ast3}
+\end{center}
 \end{figure}
 
 
