@@ -30,11 +30,6 @@ In order to extend LINVAST with new language, you should create (or use already 
 * Code was written using [Visual Studio 2019]()
 * C# Language
 
-<!-- NOTES -->
-## Notes
-
-* ...
-
 
 <!-- CONTACT -->
 ## Contact
